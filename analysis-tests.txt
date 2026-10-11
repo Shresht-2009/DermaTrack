@@ -1,0 +1,39 @@
+PASS identical images: no shape or color difference
+PASS translation normalized: under 3% shape difference
+PASS rotation normalized: under 6% shape difference
+PASS shape perturbation exceeds unchanged pose controls
+PASS lighting shift adds background warning
+PASS blank image rejected rather than analyzed
+PASS invalid seed rejected
+PASS darker simulated background segments (not a clinical fairness test)
+PASS color conversion black and white
+{
+  "checks": 9,
+  "metrics": {
+    "identical": {
+      "shapeDifference": 0,
+      "colorDistance": 0,
+      "backgroundDelta": 0
+    },
+    "changed": {
+      "shapeDifference": 17.092628157778112,
+      "colorDistance": 7.1464122464469595,
+      "backgroundDelta": 0.032965437243282825
+    },
+    "shifted": {
+      "shapeDifference": 0.17753389283409193,
+      "colorDistance": 0.35496969661368416,
+      "backgroundDelta": 0.006036758285133715
+    },
+    "rotated": {
+      "shapeDifference": 1.7745803357314127,
+      "colorDistance": 0.6474529638007349,
+      "backgroundDelta": 0.014969954254879422
+    },
+    "lit": {
+      "shapeDifference": 0.17741935483871485,
+      "colorDistance": 2.1423963056566753,
+      "backgroundDelta": 14.730340963063666
+    }
+  }
+}
